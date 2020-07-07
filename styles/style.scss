@@ -1,0 +1,33 @@
+//  declaring variables
+$primaryBtn: teal;
+$textColor: black;
+
+//import the header from _header.scss  / we can split scss files 
+@import './header';
+
+// header{
+//     background: lightblue;
+//     display: flex;
+//     justify-content: center;
+//     /*nesting */
+//     button{
+//         background: $primaryBtn;
+//         &:hover{background:red($color: #000000)}
+//     }
+// }
+
+
+/*
+header button{
+    background: $primaryBtn;
+} */
+
+// .contact button {
+//     background: $primaryBtn;
+// }
+
+.contact{
+    @include flexCenter(column,blue);
+}
+
+

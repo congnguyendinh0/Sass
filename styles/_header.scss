@@ -1,0 +1,38 @@
+//  lets you create  code that is to be reused throughout the website.
+@mixin flexCenter ($direction,$background) {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh; 
+    flex-direction: $direction;
+    background: $background;
+}
+
+
+
+
+header{
+    // background: lightblue;
+    display: flex;
+
+    // would be great to have this in a function right?
+    //we can do this by creating mixing and including it
+
+    //justify-content: center;
+    //align-items: center;
+    //height: 100vh;
+
+    //
+
+    @include flexCenter(column,red);
+
+
+
+
+    /*  nesting  it is the same as header button{background: $primaryBtn;
+        &:hover{background:red($color: #000000)} } in css */
+    button{
+        background: $primaryBtn;
+        &:hover{background:red($color: #000000)}
+    }
+}
